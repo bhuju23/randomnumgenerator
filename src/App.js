@@ -77,11 +77,11 @@ console.log(num, "num");
       <div className="container">
         <div className="section">
         <div className="section-one">
-          <label htmlFor="quantity">Max number:</label>
+          <label htmlFor="quantity">How many santas do we have?</label>
           <input type="number" id="quantity" name="quantity" min="1" onChange={handleOnChange} value={max}/>
         </div>
         <div className="section-two">
-          <h2>Selected number:</h2>
+          <h2>You are SECRET SANTA of:</h2>
           <div className="random">{loading ? raffle : rand}</div>
           <button onClick={handleOnClick} disabled={loading} className="btn">Roll</button>
         </div>
