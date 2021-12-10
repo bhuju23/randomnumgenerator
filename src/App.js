@@ -24,6 +24,8 @@ setRaffle(num[temp]);
 
    const handleOnClick = () =>{
 
+     
+
 setLoading(true);
 
      
@@ -32,6 +34,7 @@ setLoading(true);
   
     setTimeout(() => {
       setLoading(false);
+      clearInterval();
       setRand(num[temp]);
     }, 3000);
 
@@ -57,6 +60,8 @@ console.log(num, "num");
 
    }, [rand]);
 
+
+
   
   function setDeceleratingTimeout(callback,factor, times) {
     const internalCallback = ((t, counter) => {
@@ -70,12 +75,60 @@ console.log(num, "num");
   
     setTimeout(internalCallback, factor);
   }
+
+  useEffect(() => {
+    setInterval(makeSnow, 60);
+  }, []);
+ 
+
+function makeSnow() {
+	const snow = document.createElement("div");
+	const size = Math.random() * 4.5 + 3.5;
+	snow.className = "snow";
+	snow.style.width = size + "px";
+	snow.style.height = size + "px";
+	snow.style.left = Math.random() * window.innerWidth -30 + "px";
+	snow.style.opacity = size / 8;
+	if (size < 7) {
+		snow.style.zIndex = -5;
+	}
+	snow.style.animationDuration = Math.random() * 4 + 3+ "s";
+	document.body.appendChild(snow);
+	setTimeout(() => snow.remove(), 2800);
+}
+
   
   
   return (
     <>
       <div className="container">
+      <div className="window">
+		<div className="santa">
+			<div className="head">
+				<div className="face">
+					<div className="redhat">
+						<div className="whitepart"></div>
+						<div className="redpart"></div>
+						<div className="hatball"></div>
+					</div>
+					<div className="eyes"></div>
+					<div className="beard">
+						<div className="nouse"></div>
+						<div className="mouth"></div>
+					</div>
+				</div>
+				<div className="ears"></div>
+			</div>
+			<div className="body"></div>
+		</div>
+	</div>
+
+
+ 
         <div className="section">
+        <div>
+    <h1>Omnicom media group Nepal presents Secret Santa</h1>
+  </div>
         <div className="section-one">
           <label htmlFor="quantity">How many santas do we have?</label>
           <input type="number" id="quantity" name="quantity" min="1" onChange={handleOnChange} value={max}/>
@@ -97,6 +150,8 @@ console.log(num, "num");
         </div>
         </div>
       </div>
+
+      
     </>
   );
 }
