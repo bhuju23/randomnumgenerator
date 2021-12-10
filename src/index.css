@@ -34,6 +34,10 @@ max-width: 1440px;
   flex-direction: column;
 }
 
+.section-one{
+  text-align: center;
+}
+
 .section-one input{
   max-width: 30%;
   align-self: center;

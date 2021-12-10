@@ -81,7 +81,7 @@ console.log(num, "num");
           <input type="number" id="quantity" name="quantity" min="1" onChange={handleOnChange} value={max}/>
         </div>
         <div className="section-two">
-          <h2>Selected number</h2>
+          <h2>Selected number:</h2>
           <div className="random">{loading ? raffle : rand}</div>
           <button onClick={handleOnClick} disabled={loading} className="btn">Roll</button>
         </div>
