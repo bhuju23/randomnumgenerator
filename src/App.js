@@ -4,7 +4,7 @@ import useLocalStorageState from "use-local-storage-state";
 const App = () => {
    const[num, setNum] = useLocalStorageState('num',[]);
    const[max, setMax] = useLocalStorageState("max", '');
-   const[rand, setRand] = useState(null);
+   const[rand, setRand] = useState(0);
    const[raffle, setRaffle] = useState(null);
    const[loading, setLoading] = useState(false);
 
@@ -74,18 +74,19 @@ console.log(num, "num");
   
   return (
     <>
-      <div>
-        <div>
+      <div className="container">
+        <div className="section">
+        <div className="section-one">
           <label htmlFor="quantity">Max number:</label>
           <input type="number" id="quantity" name="quantity" min="1" onChange={handleOnChange} value={max}/>
         </div>
-        <div>
-          <h2>And the number is:</h2>
-          <div>{loading ? raffle : rand}</div>
-          <button onClick={handleOnClick} disabled={loading}>Roll</button>
+        <div className="section-two">
+          <h2>Selected number</h2>
+          <div className="random">{loading ? raffle : rand}</div>
+          <button onClick={handleOnClick} disabled={loading} className="btn">Roll</button>
         </div>
-        <div>
-          <ul>
+        <div className="display">
+          <ul className="display-list">
           {
           num.map((el, index) =>{
             return(
@@ -93,6 +94,7 @@ console.log(num, "num");
           )})
           }
           </ul>
+        </div>
         </div>
       </div>
     </>
