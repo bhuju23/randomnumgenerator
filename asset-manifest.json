@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/randomnumgenerator/static/css/main.77e38e48.chunk.css",
-    "main.js": "/randomnumgenerator/static/js/main.5967a866.chunk.js",
-    "main.js.map": "/randomnumgenerator/static/js/main.5967a866.chunk.js.map",
+    "main.js": "/randomnumgenerator/static/js/main.00602e01.chunk.js",
+    "main.js.map": "/randomnumgenerator/static/js/main.00602e01.chunk.js.map",
     "runtime-main.js": "/randomnumgenerator/static/js/runtime-main.5fecc20f.js",
     "runtime-main.js.map": "/randomnumgenerator/static/js/runtime-main.5fecc20f.js.map",
     "static/js/2.5761bad0.chunk.js": "/randomnumgenerator/static/js/2.5761bad0.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.5fecc20f.js",
     "static/js/2.5761bad0.chunk.js",
     "static/css/main.77e38e48.chunk.css",
-    "static/js/main.5967a866.chunk.js"
+    "static/js/main.00602e01.chunk.js"
   ]
 }
